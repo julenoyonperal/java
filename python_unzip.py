@@ -96,7 +96,7 @@ def remove_string_from_filenames(path, string_to_remove):
         print(f"An error occurred: {e}")
 
 # Example usage
-path = "D:\\GitHub\\java\\section_16\\"    # Replace with the path to your folder
+path = "D:\\GitHub\\java\\section_16\\presentations\\"    # Replace with the path to your folder
 string_to_remove = "Source-code-Arrays-"  # Replace with the string
 remove_string_from_filenames(path, string_to_remove)
 
@@ -126,8 +126,9 @@ def remove_string_from_folder_names(path, string_to_remove):
     
     except Exception as e:
         print(f"An error occurred: {e}")
-
+i = 30
 # Example usage
-path = "D:\\GitHub\\java\\section_16\\"    # Replace with the path to your folder
-string_to_remove = "Source-code-Using-Final-Immutable-&-Sealed-classes-Constructors-&-Initializers-"  # Replace with the string
+i = i + 1
+path = f"D:\\GitHub\\java\\section_{i}\\"
+string_to_remove = "Java-Networking-"  
 remove_string_from_folder_names(path, string_to_remove)

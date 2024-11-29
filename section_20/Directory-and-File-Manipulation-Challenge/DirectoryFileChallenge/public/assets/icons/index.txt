@@ -1,0 +1,5 @@
+Directory Contents: 
+C:\JMC17\DirectoryFileChallenge\public\assets\icons
+C:\JMC17\DirectoryFileChallenge\public\assets\icons\index.txt
+C:\JMC17\DirectoryFileChallenge\public\assets\icons\indexCopy.txt
+Generated: 2023-08-23T09:15:03.935882400

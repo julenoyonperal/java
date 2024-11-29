@@ -7,6 +7,7 @@ public class Account {
     private String customerPhone;
 
     public Account() {
+        this("1",100,"kepa","tonot@","123");
         System.out.println("Empty constructor called");
     }
 
@@ -19,7 +20,16 @@ public class Account {
         customerEmail = email;
         customerPhone = phone;
     }
+    public String print_variables() {
 
+        return (
+        this.number + "que pasa que pasas" +
+        this.balance +
+        this.customerName + 
+        customerEmail +
+        customerPhone 
+        );
+    }
     public void depositFunds(double depositAmount) {
 
         balance += depositAmount;

@@ -1,16 +1,10 @@
 import os
 import zipfile
+import shutil
 
-    
-start_section = 12
-end_section = 17
-for section in range(start_section, end_section + 1):
-    folder_name = f"section_{section}"
-    root_folder = f"D:\\GitHub\\java\\{folder_name}\\"
-    for folder_name, subfolders, filenames in os.walk(root_folder):
+def unzip_files(path): 
+    for folder_name, subfolders, filenames in os.walk(path):
         for filename in filenames:
-            #print(filename)
-            # Check if the file is a zip file
             if filename.endswith('.zip'):
                 file_path = os.path.join(folder_name, filename)
                 extract_to = os.path.join(folder_name, filename[:-4])  # Remove .zip from folder name
@@ -28,36 +22,112 @@ for section in range(start_section, end_section + 1):
                     print(f"Error: '{file_path}' is not a valid zip file.")
                 except Exception as e:
                     print(f"An error occurred while extracting '{file_path}': {e}")
+                    
+                    
+import os
 
-# Set the root directory
-root_folder = input("Enter the path of the folder to scan: ").strip()
-extract_zip_files(root_folder)
+def remove_zip_files(path):
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if file.endswith(".zip"):
+                file_path = os.path.join(root, file)
+                try:
+                    os.remove(file_path)
+                    print(f"Deleted: {file_path}")
+                except Exception as e:
+                    print(f"Failed to delete {file_path}: {e}")
 
+
+path = "D:\\GitHub\\java\\"
+for number in range(17, 44):
+    full_path = f"{path}section_{number}"
+    unzip_files(full_path)
+
+for number in range(17, 44):
+    full_path = f"{path}section_{number}"
+    remove_zip_files(path)
+    
+                    
+def move_pptx_files(path):
+    # Create 'presentation' folder in the source directory
+    presentation_folder = os.path.join(path, "presentations")
+    if not os.path.exists(presentation_folder):
+        os.mkdir(presentation_folder)
+        print(f"Folder 'presentations' created at {presentation_folder}")
+    else:
+        print(f"Folder 'presentations' already exists.")
+
+    # Loop through files in the source directory
+    for filename in os.listdir(path):
+        if filename.endswith(".pptx"):
+            source_path = os.path.join(path, filename)
+            destination_path = os.path.join(presentation_folder, filename)
+            # Move the file
+            shutil.move(source_path, destination_path)
+            print(f"Moved: {filename}")
+    
+    print("All .pptx files have been moved.")
+
+for number in range(17, 44):
+    full_path = f"{path}section_{number}"
+    move_pptx_files(full_path)
+
+def remove_string_from_filenames(path, string_to_remove):
+    try:
+        # Get the list of all files in the folder
+        files = os.listdir(path)
+
+        # Iterate through the files
+        for filename in files:
+            # Check if the string_to_remove is in the filename
+            if string_to_remove in filename:
+                # Create the new filename by replacing the string
+                new_filename = filename.replace(string_to_remove, "")
+                # Get the full path for the old and new filenames
+                old_path = os.path.join(path, filename)
+                new_path = os.path.join(path, new_filename)
+                # Rename the file
+                os.rename(old_path, new_path)
+                print(f"Renamed: {filename} -> {new_filename}")
+        
+        print("All matching files have been renamed.")
+    
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Example usage
+path = "D:\\GitHub\\java\\section_16\\"    # Replace with the path to your folder
+string_to_remove = "Source-code-Arrays-"  # Replace with the string
+remove_string_from_filenames(path, string_to_remove)
 
 
 import os
 
-def create_section_folders(base_folder, start_section=13, end_section=40):
-    
-
-base_folder="D:\\GitHub\\java\\"
-# Ensure the base folder exists
-if not os.path.exists(base_folder):
-    print(f"The base folder '{base_folder}' does not exist. Creating it...")
-    os.makedirs(base_folder)
-
-# Create folders for each section
-start_section=12
-end_section=40
-for section in range(start_section, end_section + 1):
-    folder_name = f"section_{section}"
-    folder_path = os.path.join(base_folder, folder_name)
+def remove_string_from_folder_names(path, string_to_remove):
     try:
-        os.makedirs(folder_path, exist_ok=True)  # Avoid errors if the folder already exists
-        print(f"Created: {folder_path}")
+        # Get the list of all folders in the directory
+        items = os.listdir(path)
+        
+        for item in items:
+            # Create the full path for the item
+            item_path = os.path.join(path, item)
+            
+            # Check if the item is a folder and contains the string_to_remove
+            if os.path.isdir(item_path) and string_to_remove in item:
+                # Create the new folder name
+                new_folder_name = item.replace(string_to_remove, "")
+                new_folder_path = os.path.join(path, new_folder_name)
+                
+                # Rename the folder
+                os.rename(item_path, new_folder_path)
+                print(f"Renamed: {item} -> {new_folder_name}")
+        
+        print("All matching folders have been renamed.")
+    
     except Exception as e:
-        print(f"Failed to create {folder_name}: {e}")
+        print(f"An error occurred: {e}")
 
-# Get the base folder path
-base_folder = input("Enter the path of the base folder: ").strip()
-create_section_folders(base_folder)
+# Example usage
+path = "D:\\GitHub\\java\\section_16\\"    # Replace with the path to your folder
+string_to_remove = "Source-code-Using-Final-Immutable-&-Sealed-classes-Constructors-&-Initializers-"  # Replace with the string
+remove_string_from_folder_names(path, string_to_remove)

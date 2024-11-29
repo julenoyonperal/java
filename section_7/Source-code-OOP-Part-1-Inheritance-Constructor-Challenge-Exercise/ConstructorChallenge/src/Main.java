@@ -2,8 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Customer customer = new Customer("Tim", 1000,
-                "tim@email.com");
+        Customer customer = new Customer(
+            "Tim"
+            ,1000
+            ,"tim@email.com");
         System.out.println(customer.getName());
         System.out.println(customer.getCreditLimit());
         System.out.println(customer.getEmail());
@@ -13,9 +15,15 @@ public class Main {
         System.out.println(secondCustomer.getCreditLimit());
         System.out.println(secondCustomer.getEmail());
 
-        Customer thirdCustomer = new Customer("Joe", "joe@email.com");
+        Customer thirdCustomer = new Customer("Kepa", "joe@email.com");
         System.out.println(thirdCustomer.getName());
         System.out.println(thirdCustomer.getCreditLimit());
         System.out.println(thirdCustomer.getEmail());
+
+
+        Customer fourthCustomer = new Customer("Kepa");
+        System.out.println(fourthCustomer.getName());
+        System.out.println(fourthCustomer.getCreditLimit());
+        System.out.println(fourthCustomer.getEmail());
     }
 }

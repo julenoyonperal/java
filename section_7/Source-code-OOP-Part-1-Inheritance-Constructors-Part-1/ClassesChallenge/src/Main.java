@@ -2,6 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        Account bobsAccount1 = new Account();
+        // System.out.println(bobsAccount1.getNumber());
+        System.out.println("|----------1-------------|");
+        System.out.println(bobsAccount1.print_variables());
+
+        System.out.println("|----------2-------------|");
+
         Account bobsAccount = new Account("12345", 500,
                 "Bob Brown", "myemail@bob.com",
                 "(087) 123-4567");
@@ -18,7 +26,6 @@ public class Main {
         bobsAccount.withdrawFunds(100.0);
         bobsAccount.depositFunds(250);
         bobsAccount.withdrawFunds(50);
-
         bobsAccount.withdrawFunds(200);
 
         bobsAccount.depositFunds(100);

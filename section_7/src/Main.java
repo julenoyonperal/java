@@ -1,8 +1,5 @@
 public class Main {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
 
         Animal animal = new Animal("Generic Animal", "Huge", 400);
@@ -21,13 +18,14 @@ public class Main {
         doAnimalStuff(wolf, "slow");
 
         Fish goldie = new Fish("Goldfish", 0.25, 2, 3);
-        goldie.print_string(gills='hola', fins='adios');
+        System.out.println(goldie.print_string("hola", "adios"));
         doAnimalStuff(goldie, "fast");
         
     }
 
     public static void doAnimalStuff(Animal animal, String speed) {
 
+        System.out.println("FUNCION : dOaNIMLA_ _ _ _");
         animal.makeNoise();
         animal.move(speed);
         System.out.println(animal);

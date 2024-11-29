@@ -61,5 +61,7 @@ public class Car {
                 make + " " +
                 model + " " +
                 (convertible ? "Convertible" : ""));
+
+        System.out.println("ESTOY LOtesteo ");
     }
 }

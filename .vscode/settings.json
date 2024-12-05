@@ -1,0 +1,11 @@
+{
+  "java.project.sourcePaths": [
+    "Java_the_complete_developer_course/section_20/Writing-Data-To-a-File/WritingFiles/src",
+    "Java_the_complete_developer_course/section_20/3_First-Steps-Understanding-File-Path-Files-and-Paths/FileExceptions/src",
+    "Java_the_complete_developer_course/section_20/2_Using-File-Path-Files/FileAndPath/src",
+    "Java_the_complete_developer_course/section_20/1_Exception-Handling-Checked-vs-Unchecked-the-finally-clause/FileExceptions/src",
+    "Java_the_complete_developer_course/section_15/Introduction-to-java.util.Collections/CollectionsMethods/src",
+    "Java_the_complete_developer_course/section_15/Collections-methods-Challenge-(Five-Card-Draw)-continued/CollectionsMethods/src",
+    "Java_the_complete_developer_course/section_20/3_First-Steps-Understanding-File-Path-Files-and-Paths"
+  ]
+}

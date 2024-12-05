@@ -1,0 +1,49 @@
+package src;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Main {
+	
+    public static void main(String[] args) {
+		
+	    String url = "jdbc:mysql://localhost:3306/music";
+	    String username = "DevJava";
+	    String password = "DevJava";
+
+	    Connection connection = null;
+	    try {
+	    	connection = DriverManager.getConnection(url, username, password);
+	    	 System.out.println("Connection to MySQL database successful!");
+//	    } catch (ClassNotFoundException e) {
+//            System.out.println("MySQL JDBC driver not found.");
+//            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("Connection failed!");
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null) {
+                	System.out.println("I am here.");
+                    connection.close();
+                }
+            } catch (SQLException e) {
+            	System.out.println("I am here 2.");
+            	e.printStackTrace();
+                
+            }
+        }
+	    	
+	    	
+	    System.out.println("Hello, World!");
+    	
+    	System.out.println("url:" + url + "\n"
+    			+ "username:" + username + "\n"
+    			+ "password:" + password + "\n"
+    			);
+    	
+    	
+    }
+}
+	

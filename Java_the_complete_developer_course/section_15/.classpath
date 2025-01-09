@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Adventure-Game-Continued/AdventureMap/src"/>
+	<classpathentry kind="src" path="Code-Setup-(Deck-of-Cards)-for-java.util.Collections-methods/CollectionsMethods/src"/>
+	<classpathentry kind="src" path="Code-Setup-(Phone-and-Email-Contacts)-for-Sets-and-Maps/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="Code-Setup-(Tasks-and-TaskData)/SetOperationsChallenge/src"/>
+	<classpathentry kind="src" path="Collections-Framework-Final-Challenge-(The-Setup)/FinalCollectionsChallenge/src"/>
+	<classpathentry kind="src" path="Collections-methods-Challenge-(Five-Card-Draw)-continued/CollectionsMethods/src"/>
+	<classpathentry kind="src" path="Collections-methods-Challenge-Your-own-Card-Game/CollectionsMethods/src"/>
+	<classpathentry kind="src" path="Collections-Understanding-the-Big-Picture/CollectionsOverview/src"/>
+	<classpathentry kind="src" path="Final-Challenge(Store-Inventory)/FinalCollectionsChallenge/src"/>
+	<classpathentry kind="src" path="Final-Challenge-(Store-Inventory)/FinalCollectionsChallenge/src"/>
+	<classpathentry kind="src" path="HashMap-Challenge-A-Text-Based-Adventure-Game/AdventureMap/src"/>
+	<classpathentry kind="src" path="Introduction-to-java.util.Collections/CollectionsMethods/src"/>
+	<classpathentry kind="src" path="Introduction-to-Sets-and-HashSet/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="java.util.Collections-(binarySearch-frequency-min-max-rotate)/CollectionsMethods/src"/>
+	<classpathentry kind="src" path="java.util.Collections-(shuffle-reverse-sort-indexOfSubList)/CollectionsMethods/src"/>
+	<classpathentry kind="src" path="LinkedHashMap-and-TreeMap/SortedMaps/src"/>
+	<classpathentry kind="src" path="LinkedHashSet-and-TreeSet/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="Map-functionality-Continued-(compute-replace-remove)/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="Set-Operations-Challenge/SetOperationsChallenge/src"/>
+	<classpathentry kind="src" path="Set-Operations-Symmetric-and-Asymmetric-results/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="Targeted-Collections-for-enum-types/EnumCollections/src"/>
+	<classpathentry kind="src" path="The-Map-Interface-and-functionality/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="TreeSet-Challenge-(Theatre-Seat-Bonus)/TreeSetChallenge/src"/>
+	<classpathentry kind="src" path="TreeSet-Closest-match-and-subset-methods/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="Understanding-the-importance-of-the-hash-code/Hashing/src"/>
+	<classpathentry kind="src" path="Working-with-Maps-view-collections-(keySet-values-entrySet)/SetsAndMaps/src"/>
+	<classpathentry kind="src" path="Working-with-TreeMap-(NavigableMap)-methods/SortedMaps/src"/>
+	<classpathentry kind="output" path="Adventure-Game-Continued/AdventureMap/out/production/AdventureMap"/>
+</classpath>

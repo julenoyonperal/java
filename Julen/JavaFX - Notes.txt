@@ -1,0 +1,16 @@
+// https://www.youtube.com/watch?v=nz8P528uGjk
+//--module-path "C:/openjfx-23.0.1/javafx-sdk-23.0.1/lib" --add-modules javafx.controls,javafx.fxml
+// https://www.youtube.com/watch?v=_7OM-cMYWbQ
+// https://openjfx.io/openjfx-docs/
+
+
+Step 1: Create project - other - JavaFX
+Step 2: Delete module-info.java
+Step 3: Click in Project and build path
+	Then to Library --> Classpath --> Add Library --> Click JavaFX
+Step 4: Click righ in project and Run as --> Run Configuration
+		Go to Arguments - VM  and copy:
+		--module-path "C:/openjfx-23.0.1/javafx-sdk-23.0.1/lib" --add-modules javafx.controls,javafx.fxml
+		
+		Then got to Dependencies and put under Modulepath entries -- JavaFX and remove JavaFX from classpath
+	
